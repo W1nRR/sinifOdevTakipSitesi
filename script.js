@@ -49,3 +49,23 @@ document.getElementById('assignment-form')?.addEventListener('submit', function(
     // Ödevlerin görüntülendiği sayfayı güncelle
     displayAssignments();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    displayAssignments();
+
+    document.getElementById('assignment-form')?.addEventListener('submit', function(event) {
+        event.preventDefault(); // Formun varsayılan gönderimini engelle
+
+        const date = document.getElementById('date').value;
+        const assignment = document.getElementById('assignment').value;
+
+        // Ödev verisini ekle
+        assignments.push({ date: date, assignment: assignment });
+
+        // Formu sıfırla
+        this.reset();
+
+        // Ödevlerin görüntülendiği sayfayı güncelle
+        displayAssignments();
+    });
+});
