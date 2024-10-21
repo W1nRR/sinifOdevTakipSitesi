@@ -15,10 +15,23 @@ table {
 
 th, td {
     padding: 10px;
+    font-weight: bold;
     text-align: left;
     border: 1px solid #ddd;
 }
 
 form {
     margin: 20px 0;
+}
+
+.bugun {
+    background-color: red;
+}
+
+.yarin {
+    background-color: orange;
+}
+
+.diger {
+    background-color: yellow;
 }
